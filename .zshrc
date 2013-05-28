@@ -47,18 +47,20 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/home/ivan/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local.java/jdk1.6.0_38/bin:/opt/gradle/bin
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/dotfiles/.bash_aliases ]; then
+    . ~/dotfiles/.bash_aliases
 fi
 
 
 # function definitions
-if [ -f ~/.functions ]; then
-    . ~/.functions
+if [ -f ~/dotfiles/.functions ]; then
+    . ~/dotfiles/.functions
 fi
 
 # z directory frequency
-. ~/bin/z.sh
+if [ -f ~/dotfiles/z.sh ]; then
+	. ~/dofiles/z.sh
+fi
 
 export JAVA_HOME=/usr/lib/jvm/java-7-oracle
 
