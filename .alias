@@ -31,6 +31,9 @@ alias hi='history | tail -20'
 alias s='sudo'
 
 alias lolcat='adb logcat | coloredlogcat.py'
+
+alias reload!='. ~/.zshrc'
+
 #API
 function jsonCurl(){
 	if [ $1 ];then
