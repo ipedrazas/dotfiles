@@ -20,6 +20,7 @@ alias ga='git add .'
 alias size='du -hs'
 alias i='sudo apt-get install'
 alias u='sudo apt-get update'
+alias install='sudo dpkg -i'
 # ----------------------------------------------------------------------
 # ALIASES / FUNCTIONS
 # ----------------------------------------------------------------------
