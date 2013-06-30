@@ -21,6 +21,8 @@ alias size='du -hs'
 alias i='sudo apt-get install'
 alias u='sudo apt-get update'
 alias install='sudo dpkg -i'
+
+alias vmkernel='sudo /etc/init.d/vboxdrv setup'
 # ----------------------------------------------------------------------
 # ALIASES / FUNCTIONS
 # ----------------------------------------------------------------------
