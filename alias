@@ -18,6 +18,8 @@ alias ga='git add .'
 alias size='du -hs'
 alias i='sudo apt-get install'
 alias u='sudo apt-get update'
+alias upgrade='sudo apt-get dist-upgrade'
+aias search='sudo apt-cache search'
 alias install='sudo dpkg -i'
 alias hosts='sudo vi /etc/hosts'
 alias vmkernel='sudo /etc/init.d/vboxdrv setup'
@@ -26,6 +28,7 @@ alias rs='python manage.py runserver'
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
+alias log='tail -f -n50'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
