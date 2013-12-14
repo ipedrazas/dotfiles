@@ -14,7 +14,7 @@ ZSH_THEME="candy"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable bi-weekly auto-update checks
+# Uncomment this to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often before auto-updates occur? (in days)
@@ -40,41 +40,18 @@ ZSH_THEME="candy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/home/ivan/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local.java/jdk1.6.0_38/bin:/opt/gradle/bin
-
-if [ -f ~/dotfiles/.bash_aliases ]; then
-    . ~/dotfiles/.bash_aliases
-fi
+export PATH=$PATH:/home/nka/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/go/bin
 
 
-# function definitions
-if [ -f ~/dotfiles/.functions ]; then
-    . ~/dotfiles/.functions
-fi
+source $HOME/dotfiles/alias
+source $HOME/dotfiles/functions
 
-# z directory frequency
-if [ -f ~/dotfiles/z.sh ]; then
-	. ~/dofiles/z.sh
-fi
+source $HOME/dotfiles/z.sh
 
-export JAVA_HOME=/usr/lib/jvm/java-7-oracle
-
-export GRADLE_HOME=/opt/gradle
-export PROMPT_COMMAND=set_prompt
-export ANDROID_HOME=/home/ivan/bin/android-sdk-linux
-export GRADLE_OPTS=-Xmx1024m
-
-
-
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
+export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
-
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/home/ivan/.gvm/bin/gvm-init.sh" ]] && source "/home/ivan/.gvm/bin/gvm-init.sh"
