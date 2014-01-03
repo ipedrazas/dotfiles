@@ -1,0 +1,39 @@
+[core]
+        excludesfile = /Users/jamie/.gitignore
+        quotepath = false
+[user]
+        name = Ivan Pedrazas
+        email = ipedrazas@gmail.com
+[color]
+  ui = auto
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[alias]
+  aa = add --all
+  br = branch
+  ci = commit
+  co = checkout
+  dc = diff --cached
+  st = status
+  wtf = !git-wtf
+  x = !gitx
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[merge]
+  tool = vimdiff
+
+[push]
+    default = current
