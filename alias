@@ -24,6 +24,7 @@ alias size='du -hs'
 alias hosts='sudo vi /etc/hosts'
 alias vmkernel='sudo /etc/init.d/vboxdrv setup'
 alias rs='python manage.py runserver'
+alias vi='vim'
 
 alias listen='sudo netstat -plunt'
 
@@ -67,6 +68,7 @@ alias lolcat='adb logcat | coloredlogcat.py'
 
 alias reload!='. ~/.zshrc'
 
+alias untar="tar -xvzf"
 
 # View HTTP traffic
 alias sniff="sudo ngrep -t '^(GET|POST) ' 'tcp and port 80'"
