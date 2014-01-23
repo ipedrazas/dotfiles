@@ -81,7 +81,6 @@ fi
 alias ll='ls -atrlF'
 alias la='ls -A'
 alias l='ls -CF'
-alias log='tail -f /var/log/nginx/error.log'
 alias p='python'
 alias ut='python -m unittest'
 alias api='cd /home/ivan/workspace/blibb-api'
