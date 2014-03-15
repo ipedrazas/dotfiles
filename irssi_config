@@ -1,3 +1,7 @@
+#
+#		This file gos in ~/.irssi/config
+#
+
 servers = (
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
   { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
