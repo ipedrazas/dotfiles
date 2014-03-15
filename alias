@@ -25,8 +25,11 @@ alias hosts='sudo vi /etc/hosts'
 alias vmkernel='sudo /etc/init.d/vboxdrv setup'
 alias rs='python manage.py runserver'
 alias vi='vim'
-
 alias listen='sudo netstat -plunt'
+
+# Vagrant
+alias up='vagrant up'
+alias valt='vagrant halt'
 
 alias i='sudo pacman -S'
 alias u='sudo pacman -U'
