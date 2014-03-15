@@ -71,7 +71,7 @@ alias reload!='. ~/.zshrc'
 alias untar="tar -xvzf"
 
 alias up='vagrant up'
-aliast valt='vagrant halt'
+alias valt='vagrant halt'
 
 # View HTTP traffic
 alias sniff="sudo ngrep -t '^(GET|POST) ' 'tcp and port 80'"
