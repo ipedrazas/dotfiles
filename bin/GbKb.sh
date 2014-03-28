@@ -1,0 +1,1 @@
+setxkbmap -rules evdev -layout gb -model evdev && notify-send -t 1000 'layout changed to GB'
