@@ -53,7 +53,10 @@ Uptime: ${uptime}
 
 
 CPU $alignr ${cpu cpu0}%
-${cpugraph cpu0}
+${cpugraph cpu1 20}
+${cpugraph cpu2 20}
+${cpugraph cpu3 20}
+${cpugraph cpu4 20}
 
 MEM $alignc $mem / $memmax $alignr $memperc%
 $membar
