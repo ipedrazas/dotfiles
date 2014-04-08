@@ -1,12 +1,16 @@
 
 
-
 cd ~
-ln -sh dotfiles/bashrc .bashrc
-ln -sh dotfiles/bin bin
-ln -sh dotfiles/gitconfig .gitconfig
-ln -sh dotfiles/vim .vimrc
-ln -sh dotfiles/zshrc .zshrc
+
+rm .bashrc
+rm .gitconfig
+rm .zshrc
+
+ln -s dotfiles/bashrc .bashrc
+ln -s dotfiles/bin bin
+ln -s dotfiles/gitconfig .gitconfig
+ln -s dotfiles/vim .vimrc
+ln -s dotfiles/zshrc .zshrc
 
 
 git config --global user.name "Ivan Pedrazas"
