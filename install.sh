@@ -5,6 +5,8 @@ cd ~
 rm .bashrc
 rm .gitconfig
 rm .zshrc
+rm .vimrc
+
 
 ln -s dotfiles/bashrc .bashrc
 ln -s dotfiles/bin bin

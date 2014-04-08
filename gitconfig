@@ -1,9 +1,10 @@
 [core]
         excludesfile = /Users/jamie/.gitignore
         quotepath = false
+	editor = vim
 [user]
-        name = Ivan Pedrazas
-        email = ipedrazas@gmail.com
+	name = Ivan Pedrazas
+	email = ipedrazas@gmail.com
 [color]
   ui = auto
   branch = auto
