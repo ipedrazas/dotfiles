@@ -1,4 +1,3 @@
-
 sudo apt-get update -y && sudo apt-get upgrade -y
 
 
@@ -8,7 +7,7 @@ sudo apt-get install ubuntu-restricted-extras
 sudo apt-get install git vim zsh terminator curl virtualbox vagrant conky vlc chromium-browser flashplugin-installer unity-tweak-tool dropbox samba system-config-samba cifs-utils winbind hotot
 
 # Install build
-sudo apt-get install build-essential module-assistant checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check
+sudo apt-get install build-essential module-assistant virtualbox-guest-additions checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check
 
 # Disable lens
 sudo apt-get autoremove unity-lens-music unity-lens-photos unity-lens-gwibber unity-lens-shopping unity-lens-video
