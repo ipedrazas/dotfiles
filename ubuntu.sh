@@ -2,7 +2,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 
 sudo apt-get install ubuntu-restricted-extras
 
-sudo apt-get install git vim zsh terminator curl virtualbox vagrant conky vlc chromium-browser flashplugin-installer unity-tweak-tool dropbox samba system-config-samba cifs-utils winbind
+sudo apt-get install git vim zsh terminator curl virtualbox vagrant conky vlc chromium-browser flashplugin-installer unity-tweak-tool dropbox samba system-config-samba cifs-utils winbind hotot
 
 curl -L http://install.ohmyz.sh | sh
 chsh -s /bin/zsh
