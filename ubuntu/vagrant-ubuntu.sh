@@ -1,7 +1,7 @@
 sudo apt-get update -y && sudo apt-get upgrade -y
 
 
-sudo apt-get install git vim zsh curl python-pip
+sudo apt-get install git vim zsh curl python-pip python-dev
 
 
 curl -L http://install.ohmyz.sh | sh
