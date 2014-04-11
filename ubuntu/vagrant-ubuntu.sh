@@ -1,3 +1,7 @@
+
+# vagrant and guestadditions nightmare
+sudo ln -s /opt/VBoxGuestAdditions-4.3.10/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
+
 sudo apt-get update -y && sudo apt-get upgrade -y
 
 
