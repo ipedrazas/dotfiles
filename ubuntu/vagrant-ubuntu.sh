@@ -1,4 +1,3 @@
-
 # vagrant and guestadditions nightmare
 sudo ln -s /opt/VBoxGuestAdditions-4.3.10/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
 
@@ -12,7 +11,7 @@ curl -L http://install.ohmyz.sh | sh
 chsh -s /bin/zsh
 
 
-pip install virtualenvwrapper
+sudo pip install virtualenvwrapper
 export WORKON_HOME=~/Envs
 mkdir -p $WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
