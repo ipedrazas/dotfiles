@@ -12,7 +12,7 @@ plugins=(git vagrant sublime ssh-agent)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/home/ivan/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/go/bin
+export PATH=$PATH:/home/ivan/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/go/bin
 
 
 source $HOME/dotfiles/alias
