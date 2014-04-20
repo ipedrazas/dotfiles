@@ -65,6 +65,9 @@ alias fn='find . -name'
 alias hi='history | tail -20'
 alias s='sudo'
 
+alias java8='sudo update-java-alternatives -s java-8-oracle'
+alias java7='sudo update-java-alternatives -s java-7-oracle'
+
 alias rake="noglob rake"
 
 alias lolcat='adb logcat | coloredlogcat.py'
