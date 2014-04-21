@@ -4,7 +4,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 # restricted
 sudo apt-get install ubuntu-restricted-extras
 
-sudo apt-get install git vim zsh terminator curl virtualbox vagrant conky vlc chromium-browser flashplugin-installer unity-tweak-tool dropbox samba system-config-samba cifs-utils winbind hotot
+sudo apt-get install git vim zsh htop terminator curl virtualbox vagrant conky vlc chromium-browser flashplugin-installer unity-tweak-tool dropbox samba system-config-samba cifs-utils winbind hotot
 
 # Install build
 sudo apt-get install build-essential module-assistant virtualbox-guest-additions checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check
