@@ -1,5 +1,5 @@
 #! /bin/bash
-
+# sudo apt-get install bluez-compat -y
 
 address="44:2A:60:E2:AC:44"
 
