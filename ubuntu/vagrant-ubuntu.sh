@@ -5,7 +5,7 @@ sudo ln -s /opt/VBoxGuestAdditions-4.3.10/lib/VBoxGuestAdditions /usr/lib/VBoxGu
 sudo apt-get update -y && sudo apt-get upgrade -y
 
 
-sudo apt-get install git vim zsh curl python-pip python-dev
+sudo apt-get install git vim zsh curl python-pip python-dev -y
 
 
 curl -L http://install.ohmyz.sh | sh
