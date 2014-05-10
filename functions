@@ -21,6 +21,9 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
+function mkdircd () { 
+	mkdir -p "$@" && cd $_;
+}
 
 
 # Start an HTTP server from a directory, optionally specifying the port

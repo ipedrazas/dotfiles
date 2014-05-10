@@ -54,6 +54,7 @@ alias l="ls -lF ${colorflag}"
 # List all files colorized in long format, including dot files
 alias la="ls -laF ${colorflag}"
 
+alias t='tmux a || tmux new-s'
 
 # ----------------------------------------------------------------------
 # ALIASES / FUNCTIONS
