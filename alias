@@ -30,6 +30,7 @@ alias listen='sudo netstat -plunt'
 # Vagrant
 alias up='vagrant up'
 alias valt='vagrant halt'
+alias vssh='vagrant ssh'
 
 #alias i='sudo pacman -S'
 #alias u='sudo pacman -U'
