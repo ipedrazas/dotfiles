@@ -6,7 +6,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-
+" F2 to enable/disable NerdTree
+nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
 
 " Make Vim more useful
 set nocompatible
