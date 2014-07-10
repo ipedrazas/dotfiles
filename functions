@@ -21,6 +21,18 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
+
+function shot(){
+				droppath="/home/ivan/Dropbox/Public/screenshots/";
+				now=`date +"%m_%d_%Y_%T"`;
+				fimage="$now.png";
+				`scrot $fimage`;
+				sleep 1;
+				`mv $fimage $droppath`;
+				link=`dropbox puburl "$droppath$fimage"`;
+				echo -n $link | xclip -selection c
+}
+
 function mkdircd () { 
 	mkdir -p "$@" && cd $_;
 }
