@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#!/bin/bash
 
 droppath="/home/ivan/Dropbox/Public/screenshots/";
 now=`date +"%m_%d_%Y_%T"`;
