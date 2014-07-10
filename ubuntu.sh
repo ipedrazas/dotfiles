@@ -2,18 +2,18 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 
 
 # restricted
-sudo apt-get install ubuntu-restricted-extras
+sudo apt-get install ubuntu-restricted-extras -y
 
-sudo apt-get install git vim zsh htop terminator curl virtualbox vagrant conky vlc chromium-browser flashplugin-installer unity-tweak-tool dropbox samba system-config-samba cifs-utils winbind hotot
+sudo apt-get install git vim zsh htop terminator curl virtualbox vagrant conky vlc chromium-browser flashplugin-installer unity-tweak-tool dropbox samba system-config-samba cifs-utils winbind hotot -y
 
 # Install build
-sudo apt-get install build-essential module-assistant virtualbox-guest-additions checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check
+sudo apt-get install build-essential module-assistant virtualbox-guest-additions checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check -y
 
 # Disable lens
-sudo apt-get autoremove unity-lens-music unity-lens-photos unity-lens-gwibber unity-lens-shopping unity-lens-video
+sudo apt-get autoremove unity-lens-music unity-lens-photos unity-lens-gwibber unity-lens-shopping unity-lens-video -y
 
 #  codecs
-sudo apt-get install libxine1-ffmpeg gxine mencoder mpeg2dec vorbis-tools id3v2 mpg321 mpg123 libflac++6 ffmpeg totem-mozilla icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 libjpeg-progs flac faac faad sox ffmpeg2theora libmpeg2-4 uudeview flac libmpeg3-1 mpeg3-utils mpegdemux liba52-0.7.4-dev libquicktime2
+sudo apt-get install libxine1-ffmpeg gxine mencoder mpeg2dec vorbis-tools id3v2 mpg321 mpg123 libflac++6 ffmpeg totem-mozilla icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 libjpeg-progs flac faac faad sox ffmpeg2theora libmpeg2-4 uudeview flac libmpeg3-1 mpeg3-utils mpegdemux liba52-0.7.4-dev libquicktime2 -y
 
 
 curl -L http://install.ohmyz.sh | sh
