@@ -18,3 +18,5 @@ ln -s dotfiles/zshrc .zshrc
 git config --global user.name "Ivan Pedrazas"
 git config --global user.email ipedrazas@gmail.com
 git config --global core.editor vim
+
+mkdir .irssi
