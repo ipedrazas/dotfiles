@@ -17,3 +17,6 @@ source $HOME/dotfiles/functions
 source $HOME/dotfiles/z.sh
 
 export LANG=en_GB.UTF-8
+
+export GOPATH=$HOME/go
+

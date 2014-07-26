@@ -32,6 +32,12 @@ alias up='vagrant up'
 alias valt='vagrant halt'
 alias vssh='vagrant ssh'
 
+
+# Docker
+alias drm="docker rm"
+alias dps="docker ps"
+
+
 #alias i='sudo pacman -S'
 #alias u='sudo pacman -U'
 #alias m='makepkg -Acs'
