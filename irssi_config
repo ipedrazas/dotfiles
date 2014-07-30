@@ -111,7 +111,7 @@ chatnets = {
   Freenode = {
     type = "IRC";
     nick = "ipedrazas";
-    autosendcmd = "/msg nickserv identify T0t0r012:irc;wait 2000";
+    autosendcmd = "/msg nickserv identify v3c1n0:irc;wait 2000";
   };
 };
 
