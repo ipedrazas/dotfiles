@@ -1,0 +1,1 @@
+ docker run -d -p 7474:7474 tpires/neo4j
