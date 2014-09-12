@@ -34,6 +34,8 @@ alias vssh='vagrant ssh'
 
 
 # Docker
+alias d="docker"
+alias dr="docker run"
 alias drm="docker rm"
 alias dps="docker ps"
 
