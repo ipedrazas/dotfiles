@@ -21,6 +21,9 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
+function drips(){
+				docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.IPAddress }} {{ .Name }}' | sed 's/ \// /'
+}
 
 function shot(){
 				droppath="/home/ivan/Dropbox/Public/screenshots/";

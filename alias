@@ -11,10 +11,14 @@ alias web=' cd /home/ivan/workspace/blibb-web'
 alias depweb='cd /home/ivan/workspace/deploy-web'
 alias depap='cd /home/ivan/wokspace/deploy-api'
 alias ..='cd ..'
+
+# Git
 alias gs='git status'
 alias gc='git commit -m'
 alias gp='git pull'
 alias ga='git add .'
+alias gsa='git ls-files --others --exclude-standard'
+
 alias size='du -hs'
 alias i='sudo apt-get install'
 alias u='sudo apt-get update'
