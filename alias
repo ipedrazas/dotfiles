@@ -42,7 +42,8 @@ alias d="docker"
 alias dr="docker run"
 alias drm="docker rm"
 alias dps="docker ps"
-
+alias ds="docker stop"
+alias dlog="docker logs"
 
 #alias i='sudo pacman -S'
 #alias u='sudo pacman -U'
