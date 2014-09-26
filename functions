@@ -21,7 +21,11 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
-function drips(){
+function dsall(){
+				docker stop $(docker ps -a -q)
+}
+
+function dips(){
 				docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.IPAddress }} {{ .Name }}' | sed 's/ \// /'
 }
 
