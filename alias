@@ -31,6 +31,9 @@ alias rs='python manage.py runserver'
 alias vi='vim'
 alias listen='sudo netstat -plunt'
 
+# IP
+alias ipas='ip a s'
+
 # Vagrant
 alias up='vagrant up'
 alias valt='vagrant halt'
