@@ -18,6 +18,7 @@ alias gc='git commit -m'
 alias gp='git pull'
 alias ga='git add .'
 alias gsa='git ls-files --others --exclude-standard'
+alias push='git push -u origin master'
 
 alias size='du -hs'
 alias i='sudo apt-get install'
