@@ -8,6 +8,11 @@ rm .zshrc
 rm .vimrc
 
 
+mkdir -p  ~/.vim/swaps
+mkdir -p ~/.vim/backups
+mkdir -p ~/.vim/undos
+
+
 ln -s dotfiles/bashrc .bashrc
 ln -s dotfiles/bin bin
 ln -s dotfiles/gitconfig .gitconfig
