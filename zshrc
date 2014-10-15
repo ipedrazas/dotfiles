@@ -20,3 +20,6 @@ export LANG=en_GB.UTF-8
 
 export GOPATH=$HOME/go
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"

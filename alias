@@ -35,6 +35,17 @@ alias listen='sudo netstat -plunt'
 # IP
 alias ipas='ip a s'
 
+
+alias copykey='xclip -sel clip < ~/.ssh/id_rsa.pub'
+
+
+# Java
+
+alias setjava6='sudo update-java-alternatives -s java-6-oracle'
+alias setjava7='sudo update-java-alternatives -s java-7-oracle'
+alias setjava8='sudo update-java-alternatives -s java-8-oracle'
+
+
 # Vagrant
 alias up='vagrant up'
 alias valt='vagrant halt'
