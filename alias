@@ -38,7 +38,8 @@ alias listen='sudo netstat -plunt'
 
 # IP
 alias ipas='ip a s'
-
+alias ports='netstat -tulanp'
+alias ping='ping -c 5'
 
 alias copykey='xclip -sel clip < ~/.ssh/id_rsa.pub'
 
@@ -68,10 +69,9 @@ alias dlog="docker logs"
 #alias u='sudo pacman -U'
 #alias m='makepkg -Acs'
 
-alias d="cd ~/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias log='tail -f -n50'
+alias log='tail -f -n50 '
+alias df='df -H'
+alias du='du -ch'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -116,6 +116,26 @@ alias valt='vagrant halt'
 # View HTTP traffic
 alias sniff="sudo ngrep -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# reboot / halt / poweroff
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias halt='sudo /sbin/halt'
+alias shutdown='sudo /sbin/shutdown'
+
+## pass options to free ## 
+alias meminfo='free -m -l -t'
+ 
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+  
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+	 
+## Get server cpu info ##
+alias cpuinfo='lscpu'
 
 
 #API
