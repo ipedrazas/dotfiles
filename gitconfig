@@ -1,6 +1,4 @@
 [core]
-        excludesfile = /Users/jamie/.gitignore
-        quotepath = false
 	editor = vim
 [user]
 	name = Ivan Pedrazas
@@ -23,20 +21,23 @@
   added = yellow
   changed = green
   untracked = cyan
+
 [alias]
   aa = add --all
   br = branch
-  ci = commit
+  ci = commit -a
   co = checkout
   dc = diff --cached
   st = status
   wtf = !git-wtf
   x = !gitx
-        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
 [merge]
   tool = vimdiff
 
 [push]
-    default = current
+    default = simple
+
 [credential]
 	helper = cache --timeout=3600
