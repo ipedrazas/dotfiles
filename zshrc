@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="candy"
 
-plugins=(git vagrant sublime ssh-agent docker maven)
+plugins=(git vagrant sublime ssh-agent docker maven knife)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -23,3 +23,7 @@ export GOPATH=$HOME/go
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+source $HOME/.awsip
+
+setxkbmap gb

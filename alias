@@ -1,5 +1,5 @@
 # Adbrain
-alias advpn='sudo openvpn --script-security 2 --config ~/.ssh/client.ovpn  --auth-user-pass ~/.ssh/advpn.txt'
+alias advpn='sudo openvpn --script-security 2 --config ~/.ssh/client.ovpn  --auth-user-pass ~/.advpn.txt'
 
 
 # some more ls aliases
@@ -97,7 +97,7 @@ alias t='tmux a || tmux new-s'
 alias du1='du -h --max-depth=1'
 alias fn='find . -name'
 alias hi='history | tail -20'
-alias s='sudo'
+alias s='sudo '
 
 alias java8='sudo update-java-alternatives -s java-8-oracle'
 alias java7='sudo update-java-alternatives -s java-7-oracle'
