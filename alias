@@ -22,7 +22,6 @@ alias gc='git commit -m'
 alias gp='git pull'
 alias ga='git add .'
 alias gsa='git ls-files --others --exclude-standard'
-alias push='git push -u origin master'
 
 alias size='du -hs'
 alias i='sudo apt-get install'
@@ -63,7 +62,7 @@ alias dr="docker run"
 alias drm="docker rm"
 alias dps="docker ps"
 alias ds="docker stop"
-alias dlog="docker logs"
+alias dlogs="docker logs"
 
 #alias i='sudo pacman -S'
 #alias u='sudo pacman -U'
@@ -99,9 +98,6 @@ alias fn='find . -name'
 alias hi='history | tail -20'
 alias s='sudo '
 
-alias java8='sudo update-java-alternatives -s java-8-oracle'
-alias java7='sudo update-java-alternatives -s java-7-oracle'
-
 alias rake="noglob rake"
 
 alias lolcat='adb logcat | coloredlogcat.py'
@@ -109,9 +105,6 @@ alias lolcat='adb logcat | coloredlogcat.py'
 alias reload!='. ~/.zshrc'
 
 alias untar="tar -xvzf"
-
-alias up='vagrant up'
-alias valt='vagrant halt'
 
 # View HTTP traffic
 alias sniff="sudo ngrep -t '^(GET|POST) ' 'tcp and port 80'"
