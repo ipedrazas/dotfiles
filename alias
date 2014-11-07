@@ -110,12 +110,6 @@ alias untar="tar -xvzf"
 alias sniff="sudo ngrep -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
-# reboot / halt / poweroff
-alias reboot='sudo /sbin/reboot'
-alias poweroff='sudo /sbin/poweroff'
-alias halt='sudo /sbin/halt'
-alias shutdown='sudo /sbin/shutdown'
-
 ## pass options to free ## 
 alias meminfo='free -m -l -t'
  
