@@ -3,12 +3,12 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="candy"
 
-plugins=(git vagrant sublime ssh-agent docker maven knife)
+plugins=(git vagrant sublime ssh-agent docker maven knife systemadmin)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/go/bin:/home/ivan/android/sdk/tools:
+export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:
 
 
 source $HOME/dotfiles/alias
