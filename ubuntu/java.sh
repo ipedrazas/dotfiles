@@ -23,3 +23,5 @@ sudo update-java-alternatives -s java-7-oracle
 # Java 6 is needed for developingwith Android
 sudo update-java-alternatives -s java-6-oracle
 
+# Set Java8 Default
+sudo apt-get install oracle-java8-set-default
