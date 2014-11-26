@@ -25,4 +25,11 @@ sh ubuntu/sublime-install.sh
 
 gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope', 'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', 'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
 
+# hermit fonts
+wget https://pcaro.es/d/otf-hermit-1.21.tar.gz
+tar -xzf otf-hermit-1.21.tar.gz
+sudo mv *.otf /usr/share/fonts
+rm *.otf
+rm otf-hermit-1.21.tar.gz
+
 
