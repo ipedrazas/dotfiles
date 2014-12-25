@@ -63,6 +63,7 @@ alias drm="docker rm"
 alias dps="docker ps"
 alias ds="docker stop"
 alias dlogs="docker logs"
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
 #alias i='sudo pacman -S'
 #alias u='sudo pacman -U'

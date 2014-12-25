@@ -8,7 +8,7 @@ plugins=(git vagrant sublime ssh-agent docker maven knife)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/go/bin:/home/ivan/android/sdk/tools:
+export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/go/bin:
 
 
 source $HOME/dotfiles/alias
@@ -24,3 +24,4 @@ setxkbmap gb
 if [ -f ~/.rubyrc ]; then 
 	source ~/.rubyrc; 
 fi
+
