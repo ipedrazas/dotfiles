@@ -2,11 +2,24 @@
 
 cd ~
 
-rm .bashrc
-rm .gitconfig
-rm .zshrc
-rm .vimrc
+if [ -f .bashrc ];
+then
+   rm .bashrc
+fi
+if [ -f .gitconfig ];
+then
+   rm .gitconfig
+fi
+if [ -f .zshrc ];
+then
+   rm .zshrc
+fi
+if [ -f .vimrc ];
+then
+   rm .vimrc
+fi
 
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 mkdir -p  ~/.vim/swaps
 mkdir -p ~/.vim/backups
