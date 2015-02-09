@@ -24,3 +24,11 @@ setxkbmap gb
 if [ -f ~/.rubyrc ]; then 
 	source ~/.rubyrc; 
 fi
+
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=/home/ivan/workspace/lab/golab/heartbeat
+
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
