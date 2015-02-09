@@ -1,5 +1,7 @@
 [core]
-	editor = vim
+  editor = vim
+  excludesfile = ~/.gitignore_global
+  
 [user]
 	name = Ivan Pedrazas
 	email = ipedrazas@gmail.com
@@ -8,15 +10,18 @@
   branch = auto
   diff = auto
   status = auto
+  
 [color "branch"]
   current = yellow reverse
   local = yellow
   remote = green
+
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
   old = red bold
   new = green bold
+
 [color "status"]
   added = yellow
   changed = green
@@ -36,8 +41,21 @@
 [merge]
   tool = vimdiff
 
+[branch]
+  autosetuprebase = always
+
+[merge]
+  ff = false
+
 [push]
-    default = simple
+  default = upstream
+
+[pull]
+  rebase = true
+
+[branch "master"]
+  rebase = true
+  mergeoptions = --no-ff
 
 [credential]
 	helper = cache --timeout=3600

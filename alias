@@ -64,6 +64,7 @@ alias drm="docker rm"
 alias dps="docker ps"
 alias ds="docker stop"
 alias dlogs="docker logs"
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
 #alias i='sudo pacman -S'
 #alias u='sudo pacman -U'
@@ -110,12 +111,6 @@ alias untar="tar -xvzf"
 # View HTTP traffic
 alias sniff="sudo ngrep -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
-# reboot / halt / poweroff
-alias reboot='sudo /sbin/reboot'
-alias poweroff='sudo /sbin/poweroff'
-alias halt='sudo /sbin/halt'
-alias shutdown='sudo /sbin/shutdown'
 
 ## pass options to free ## 
 alias meminfo='free -m -l -t'

@@ -4,7 +4,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 # restricted
 sudo apt-get install ubuntu-restricted-extras -y
 
-sudo apt-get install git vim vim-athena zsh htop terminator curl virtualbox vagrant conky vlc chromium-browser flashplugin-installer unity-tweak-tool samba system-config-samba cifs-utils winbind irssi irssi-plugin-xmpp -y
+sudo apt-get install git vim vim-athena zsh htop terminator curl virtualbox vagrant conky vlc chromium-browser flashplugin-installer unity-tweak-tool samba system-config-samba cifs-utils winbind irssi irssi-plugin-xmpp network-manager-openvpn -y
 
 # Install build
 sudo apt-get install build-essential module-assistant virtualbox-guest-additions checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check -y
@@ -24,5 +24,12 @@ sh ubuntu/sublime-install.sh
 # sh ubuntu/dropbox-install.sh
 
 gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope', 'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', 'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
+
+# hermit fonts
+wget https://pcaro.es/d/otf-hermit-1.21.tar.gz
+tar -xzf otf-hermit-1.21.tar.gz
+sudo mv *.otf /usr/share/fonts
+rm *.otf
+rm otf-hermit-1.21.tar.gz
 
 
