@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="candy"
 
-plugins=(git vagrant sublime ssh-agent docker maven knife systemadmin)
+plugins=(git vagrant sublime ssh-agent docker mvn knife systemadmin aws sudo)
 
 source $ZSH/oh-my-zsh.sh
 
