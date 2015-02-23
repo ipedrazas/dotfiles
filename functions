@@ -21,6 +21,10 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
+function old(){
+	mv $1 old.$1;
+}
+
 function dsall(){
 				docker stop $(docker ps -a -q)
 }
