@@ -32,3 +32,8 @@ export GOPATH=/home/ivan/workspace/lab/golab/heartbeat
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+if [ -f ~/.mailsecret ]; then
+	 source ~/.mailsecret;
+fi
+
