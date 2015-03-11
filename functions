@@ -22,7 +22,7 @@ LC=$BLUE
 HD=$FULL
 
 function updatenode(){
-	knife exec -E 'nodes.transform("name:$1") {|n| puts n.run_list << "$2" unless n.run_list.include?("$2"); n.save }'
+	knife exec -E 'nodes.transform("name:'$1'") {|n| puts n.run_list << "'$2'" unless n.run_list.include?("'$2'"); n.save }'
 }
 
 function old(){
