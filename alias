@@ -1,7 +1,3 @@
-# Adbrain
-alias advpn='sudo openvpn --script-security 2 --config ~/.ssh/client.ovpn  --auth-user-pass ~/.advpn.txt'
-alias sshjenkins='ssh 172.31.45.125'
-alias sshdriver='ssh 172.31.42.101'
 
 # some more ls aliases
 alias grep='grep --color=auto'
@@ -102,7 +98,6 @@ alias s='sudo '
 
 alias rake="noglob rake"
 
-#alias lolcat='adb logcat | coloredlogcat.py'
 
 alias reload!='. ~/.zshrc'
 
