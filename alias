@@ -102,7 +102,7 @@ alias s='sudo '
 
 alias rake="noglob rake"
 
-alias lolcat='adb logcat | coloredlogcat.py'
+#alias lolcat='adb logcat | coloredlogcat.py'
 
 alias reload!='. ~/.zshrc'
 
