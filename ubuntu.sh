@@ -32,4 +32,5 @@ sudo mv *.otf /usr/share/fonts
 rm *.otf
 rm otf-hermit-1.21.tar.gz
 
+echo "setxkbmap gb" >> ~/.zshrc
 
