@@ -33,15 +33,18 @@ export GOPATH=/home/ivan/workspace/lab/golab/heartbeat
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/ivan/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+				setxkbmap gb
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+
+	export DOCKER_HOST=tcp://192.168.59.103:2376
+	export DOCKER_CERT_PATH=/Users/ivan/.boot2docker/certs/boot2docker-vm
+	export DOCKER_TLS_VERIFY=1
 
 
-export JAVA_HOME=$(/usr/libexec/java_home)
-#export M2_HOME=/usr/local/Cellar/maven/3.2.5
-#export M2=$M2_HOME/bin
-#export PATH=$M2:$PATH
-export M2=`brew --prefix maven`/libexec/bin
-export M2_HOME=`brew --prefix maven`/libexec
+	export JAVA_HOME=$(/usr/libexec/java_home)
+	export M2=`brew --prefix maven`/libexec/bin
+	export M2_HOME=`brew --prefix maven`/libexec
 
+fi
