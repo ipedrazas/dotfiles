@@ -25,6 +25,10 @@ if [ -f ~/.rubyrc ]; then
 	source ~/.rubyrc; 
 fi
 
+if [ -f ~/.sshalias ]; then
+	source ~/.sshalias
+fi
+
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
 export GOPATH=/home/ivan/workspace/lab/golab/heartbeat
