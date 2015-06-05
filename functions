@@ -21,6 +21,14 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
+function dex(){
+	docker exec -it $1 bash
+}
+
+function rmimages(){
+	docker rmi $( docker images | grep '<none>' | tr -s ' ' | cut -d ' ' -f 3)
+}
+
 function updatenode(){
 	knife exec -E 'nodes.transform("name:'$1'") {|n| puts n.run_list << "'$2'" unless n.run_list.include?("'$2'"); n.save }'
 }
