@@ -13,6 +13,9 @@ alias depweb='cd /home/ivan/workspace/deploy-web'
 alias depap='cd /home/ivan/wokspace/deploy-api'
 alias ..='cd ..'
 
+
+alias hosts='sudo vim /etc/hosts'
+
 # Git
 alias gs='git status'
 alias gc='git commit -m'
