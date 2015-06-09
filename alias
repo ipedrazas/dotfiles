@@ -15,7 +15,11 @@ alias ..='cd ..'
 
 
 alias hosts='sudo vim /etc/hosts'
-
+# Pipe my public key to my clipboard.
+alias pubkey="more ~/.ssh/id_rsa.pub | xclip -selection clipboard | echo '=> Public key copied to pasteboard.'"
+#
+# # Pipe my private key to my clipboard.
+alias prikey="more ~/.ssh/id_rsa | xclip -selection clipboard | echo '=> Private key copied to pasteboard.'"
 # Git
 alias gs='git status'
 alias gc='git commit -m'
