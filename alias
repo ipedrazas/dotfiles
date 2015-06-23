@@ -77,6 +77,7 @@ alias log='tail -f -n50 '
 alias df='df -H'
 alias du='du -ch'
 
+alias duh='du -ch --max-depth=1  | sort -n -r'
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
         colorflag="--color"
