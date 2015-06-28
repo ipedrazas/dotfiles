@@ -52,3 +52,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	export M2_HOME=`brew --prefix maven`/libexec
 
 fi
+
+K=/home/ivan/workspace/lab/kubernetes/kubernetes/kubernetes/cluster/
+
+if [[ -d  $K ]]; then
+				export PATH=$PAH:$K:
+fi
