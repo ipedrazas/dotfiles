@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="candy"
 
-plugins=(git vagrant sublime ssh-agent docker mvn knife systemadmin aws sudo)
+plugins=(git vagrant sublime ssh-agent docker mvn systemadmin aws sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -24,8 +24,8 @@ export LANG=en_GB.UTF-8
 
 #setxkbmap gb
 
-if [ -f ~/.rubyrc ]; then 
-	source ~/.rubyrc; 
+if [ -f ~/.rubyrc ]; then
+	source ~/.rubyrc;
 fi
 
 if [ -f ~/.sshalias ]; then
@@ -48,15 +48,15 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	export DOCKER_CERT_PATH=/Users/ivan/.boot2docker/certs/boot2docker-vm
 	export DOCKER_TLS_VERIFY=1
 
-
 	export JAVA_HOME=$(/usr/libexec/java_home)
 	export M2=`brew --prefix maven`/libexec/bin
 	export M2_HOME=`brew --prefix maven`/libexec
 
 fi
 
-K=/home/ivan/workspace/lab/kubernetes/kubernetes/kubernetes/cluster/
+K=/opt/kubernetes
 
 if [[ -d  $K ]]; then
-				export PATH=$PAH:$K:
+	export PATH=$PATH:$K:
 fi
+
