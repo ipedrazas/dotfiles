@@ -8,8 +8,11 @@ plugins=(git vagrant sublime ssh-agent docker mvn knife systemadmin aws sudo)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/Users/ivan/workspace/utils:
+export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/Users/ivan/workspace/utils:/usr/local/go/bin
 
+if [[ -d "/opt/etcd" ]]; then
+				export PATH=$PATH:/opt/etcd
+fi
 
 source $HOME/dotfiles/alias
 source $HOME/dotfiles/functions
@@ -31,7 +34,6 @@ fi
 
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
-export GOPATH=/home/ivan/workspace/lab/golab/heartbeat
 
 
 export VISUAL=vim
