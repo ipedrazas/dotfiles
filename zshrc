@@ -51,7 +51,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	export JAVA_HOME=$(/usr/libexec/java_home)
 	export M2=`brew --prefix maven`/libexec/bin
 	export M2_HOME=`brew --prefix maven`/libexec
-
+  export IO_HOME=/Applications/C24
 fi
 
 K=/opt/kubernetes
