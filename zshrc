@@ -13,6 +13,19 @@ export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/Users/ivan/works
 # golang
 export PATH=$PATH:/usr/local/go/bin
 
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+	setxkbmap gb
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+
+	export DOCKER_HOST=tcp://192.168.59.103:2376
+	export DOCKER_CERT_PATH=/Users/ivan/.boot2docker/certs/boot2docker-vm
+	export DOCKER_TLS_VERIFY=1
+
+	export JAVA_HOME=$(/usr/libexec/java_home)
+	export M2=`brew --prefix maven`/libexec/bin
+	export M2_HOME=`brew --prefix maven`/libexec
+  	export IO_HOME=/Applications/C24
+fi
 
 
 if [[ -d "/opt/etcd" ]]; then
@@ -44,20 +57,6 @@ export PATH=$PATH:$GOROOT/bin
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-				setxkbmap gb
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-
-	export DOCKER_HOST=tcp://192.168.59.103:2376
-	export DOCKER_CERT_PATH=/Users/ivan/.boot2docker/certs/boot2docker-vm
-	export DOCKER_TLS_VERIFY=1
-
-	export JAVA_HOME=$(/usr/libexec/java_home)
-	export M2=`brew --prefix maven`/libexec/bin
-	export M2_HOME=`brew --prefix maven`/libexec
-  export IO_HOME=/Applications/C24
-fi
 
 K=/opt/kubernetes
 
