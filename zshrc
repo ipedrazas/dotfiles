@@ -8,7 +8,16 @@ plugins=(git vagrant sublime ssh-agent docker mvn systemadmin aws sudo)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/Users/ivan/workspace/utils:/usr/local/go/bin
+export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/Users/ivan/workspace/utils
+
+# golang
+if [[ $OSTYPE != darwin* ]]; then
+    export PATH=$PATH:/usr/local/go/bin
+else
+    export PATH=$PATH:/usr/local/opt/go/libexec/bin
+fi
+
+
 
 if [[ -d "/opt/etcd" ]]; then
 				export PATH=$PATH:/opt/etcd
