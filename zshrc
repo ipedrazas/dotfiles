@@ -10,9 +10,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/Users/ivan/workspace/utils
 
-# golang
-export PATH=$PATH:/usr/local/go/bin
-
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	setxkbmap gb
 elif [[ "$OSTYPE" == "darwin"* ]]; then
@@ -50,17 +47,18 @@ if [ -f ~/.sshalias ]; then
 	source ~/.sshalias
 fi
 
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
-
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
 
-K=/opt/kubernetes
+K=/opt/kubernetes/cluster
 
 if [[ -d  $K ]]; then
 	export PATH=$PATH:$K:
 fi
 
+
+if [ -f /home/ivan/.gvm/scripts/gvm ]; then
+	source /home/ivan/.gvm/scripts/gvm
+fi
