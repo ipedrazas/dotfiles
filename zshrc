@@ -12,6 +12,7 @@ export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/Users/ivan/works
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	setxkbmap gb
+	export GOPATH="$HOME/go"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 	export DOCKER_HOST=tcp://192.168.59.103:2376
@@ -21,7 +22,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	export JAVA_HOME=$(/usr/libexec/java_home)
 	export M2=`brew --prefix maven`/libexec/bin
 	export M2_HOME=`brew --prefix maven`/libexec
-  	export IO_HOME=/Applications/C24
+ 	export IO_HOME=/Applications/C24
 fi
 
 
@@ -61,4 +62,7 @@ fi
 
 if [ -f /home/ivan/.gvm/scripts/gvm ]; then
 	source /home/ivan/.gvm/scripts/gvm
+	gvm use go1.5.1
+	export GOPATH="$HOME/go"
+	export PATH=$PATH:/home/ivan/go/bin:
 fi
