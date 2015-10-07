@@ -37,7 +37,7 @@ source $HOME/dotfiles/z.sh
 export LANG=en_GB.UTF-8
 
 
-#setxkbmap gb
+setxkbmap gb
 
 if [ -f ~/.rubyrc ]; then
 	source ~/.rubyrc;
