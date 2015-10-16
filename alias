@@ -142,3 +142,12 @@ function jsonCurl(){
 
 alias userdata='curl http://169.254.169.254/latest/user-data'
 alias slack='docker start slack'
+
+alias k="kubectl"
+alias kc="kubectl create -f"
+alias pods="kubectl get pods"
+alias rcs="kubectl get rc"
+alias svcs="kubectl get services"
+alias kdp="kubectl describe pod "
+alias kds="kubectl describe service "
+
