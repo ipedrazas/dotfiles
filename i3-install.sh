@@ -14,3 +14,10 @@ rm -rf font-awesome-4.4.0
 wget http://www.fontsquirrel.com/fonts/download/M-1m
 unzip M-1m
 cp mplus-*.ttf ~/.i3
+rm M-1m
+rm *.ttf
+
+wget https://github.com/driftyco/ionicons/archive/v2.0.1.zip
+unzip v2.0.1.zip
+cp ionicons-2.0.1/fonts/ionicons.ttf ~/.i3
+rm -rf ionicons-2.0.1
