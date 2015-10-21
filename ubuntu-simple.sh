@@ -26,7 +26,6 @@ gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-ama
 wget https://pcaro.es/d/otf-hermit-1.21.tar.gz
 tar -xzf otf-hermit-1.21.tar.gz
 sudo mv *.otf /usr/share/fonts
-rm *.otf
 rm otf-hermit-1.21.tar.gz
 
 echo "setxkbmap gb" >> ~/.zshrc
