@@ -12,10 +12,12 @@ sudo apt-get install build-essential module-assistant checkinstall cdbs devscrip
 # Disable lens
 sudo apt-get autoremove unity-lens-music unity-lens-photos unity-lens-gwibber unity-lens-shopping unity-lens-video -y
 
+wget http://download.opensuse.org/repositories/home:/olav-st/xUbuntu_14.04/amd64/screencloud_1.2.0-1_amd64.deb
+sudo dpkg -i screencloud_1.2.0-1_amd64.deb
+
 
 curl -L http://install.ohmyz.sh | sh
 chsh -s /bin/zsh
-
 
 sh ubuntu/sublime-install.sh
 # sh ubuntu/dropbox-install.sh
