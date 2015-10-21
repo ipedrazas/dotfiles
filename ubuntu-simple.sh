@@ -12,6 +12,9 @@ sudo apt-get install build-essential module-assistant checkinstall cdbs devscrip
 # Disable lens
 sudo apt-get autoremove unity-lens-music unity-lens-photos unity-lens-gwibber unity-lens-shopping unity-lens-video -y
 
+# Chrome
+wget https://dl.google.com/linux/direct/google-chrome-beta_current_amd64.deb
+sudo dpkg -i google-chrome-beta_current_amd64.deb
 
 curl -L http://install.ohmyz.sh | sh
 chsh -s /bin/zsh
