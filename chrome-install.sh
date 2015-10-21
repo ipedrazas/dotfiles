@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 # Chrome
-apt-get update && apt-get install -y \
+sudo apt-get update && apt-get install -y \
     ca-certificates \
     fonts-liberation \
     gconf-service \
