@@ -12,5 +12,5 @@ cp font-awesome-4.4.0/fonts/fontawesome-webfont.ttf ~/.i3
 rm -rf font-awesome-4.4.0
 
 wget http://www.fontsquirrel.com/fonts/download/M-1m
-unzip M-1m.zip
+unzip M-1m
 cp mplus-*.ttf ~/.i3
