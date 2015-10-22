@@ -1,5 +1,9 @@
 #! /usr/bin/env bash
 
+mkdir ~/.i3
+cp ./i3config ~/.i3/config
+cp ./i3status.conf ~/.i3/
+
 sudo apt-add-repository -y ppa:yktooo/ppa
 
 sudo apt-get install -y i3 dunst i3lock zip lxappearance gtk-chtheme qt4-qtconfig indicator-sound-switcher
