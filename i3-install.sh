@@ -36,3 +36,7 @@ rm v2.0.1.zip
 
 # refresh fonts
 sudo fc-cache -f -v
+
+# automount usb drives 
+cp 10-usb-mount.rules /etc/udev/rules.d
+udevadm control --reload-rules
