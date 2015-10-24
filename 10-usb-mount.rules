@@ -1,0 +1,38 @@
+
+#!/bin/sh
+
+KERNEL!="sd[b-z]*", GOTO="exit"
+
+ACTION=="add", PROGRAM!="/sbin/blkid %N", GOTO="exit"
+
+IMPORT{program}="/sbin/blkid -o udev -p %N"
+
+ENV{ID_FS_LABEL}!="", ENV{dir_name}="%E{ID_FS_LABEL}"
+
+ENV{ID_FS_LABEL}=="", ENV{dir_name}="flash_drive_%k"
+
+ACTION=="add", RUN+="/bin/mkdir -p '/media/%E{dir_name}'"
+
+ACTION=="add", ENV{mount_options_vfat}="rw,uid=1000,gid=1000,dmask=022,fmask=133,noatime"
+
+ACTION=="add", ENV{ID_FS_TYPE}=="vfat", RUN+="/bin/mount -t vfat -o %E{mount_options_vfat} /dev/%k '/media/%E{dir_name}'"
+
+ACTION=="add", ENV{mount_options_ntfs}="rw,uid=1000,gid=1000,dmask=022,fmask=133,noatime"
+
+ACTION=="add", ENV{ID_FS_TYPE}=="ntfs", RUN+="/bin/mount -t ntfs-3g -o %E{mount_options_ntfs} /dev/%k '/media/%E{dir_name}'"
+
+ACTION=="add", ENV{mount_options_ext2}="users,exec,noatime"
+
+ACTION=="add", ENV{ID_FS_TYPE}=="ext2", RUN+="/bin/mount -t ext2 -o %E{mount_options_ext2} /dev/%k '/media/%E{dir_name}'"
+
+ACTION=="add", ENV{mount_options_ext3}="users,exec,noatime"
+
+ACTION=="add", ENV{ID_FS_TYPE}=="ext3", RUN+="/bin/mount -t ext3 -o %E{mount_options_ext3} /dev/%k '/media/%E{dir_name}'"
+
+ACTION=="add", ENV{mount_options_ext4}="users,exec,noatime"
+
+ACTION=="add", ENV{ID_FS_TYPE}=="ext4", RUN+="/bin/mount -t ext4 -o %E{mount_options_ext4} /dev/%k '/media/%E{dir_name}'"
+
+ACTION=="remove", ENV{dir_name}!="", RUN+="/bin/umount '/media/%E{dir_name}'", RUN+="/bin/rmdir '/media/%E{dir_name}'"
+
+LABEL="exit"
