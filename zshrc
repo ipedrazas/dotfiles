@@ -66,3 +66,5 @@ if [ -f /home/ivan/.gvm/scripts/gvm ]; then
 	export GOPATH="$HOME/go"
 	export PATH=$PATH:/home/ivan/go/bin:
 fi
+
+export KUBERNETES_PROVIDER=aws;
