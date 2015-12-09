@@ -11,6 +11,12 @@ wget http://cz.archive.ubuntu.com/ubuntu/pool/universe/i/i3status/i3status_2.9-2
 sudo dpkg -i i3status_2.9-2_amd64.deb
 rm i3status_2.9-2_amd64.deb
 
+
+# download playerctl
+wget https://github.com/acrisci/playerctl/releases/download/v0.4.2/playerctl-0.4.2_amd64.deb
+sudo dpkg -i playerctl-0.4.2_amd64.deb
+rm playerctl-0.4.2_amd64.deb
+
 # download fonts
 wget https://fortawesome.github.io/Font-Awesome/assets/font-awesome-4.4.0.zip
 unzip font-awesome-4.4.0.zip
