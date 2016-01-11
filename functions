@@ -21,6 +21,25 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
+
+function namespace(){
+	export CONTEXT=$(kubectl config view | grep current-context | awk '{print $2}')
+	kubectl config set-context $CONTEXT --namespace=$1
+}
+
+function setDSP(){
+	kubectl config set-cluster dev-dsp --server=https://kube-dev-dsp.notprod.homeoffice.gov.uk
+	kubectl config set-credentials dev-dsp --token=$KUBE_TOKEN
+	kubectl config set-context dev-dsp --cluster=dev-dsp --namespace=$NAMESPACE --user=dev-dsp
+	kubectl config use-context dev-dsp
+}
+
+function newpost(){
+	TODAY=$(date '+%Y_%m_%d__%H_%M_%S')
+	TITLE=$1
+	hugo new post/"$TODAY-$TITLE"
+}
+
 function dex(){
 	docker exec -it $1 bash
 }

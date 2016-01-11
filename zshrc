@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="candy"
 
-plugins=(git vagrant sublime ssh-agent docker mvn systemadmin aws sudo)
+plugins=(git sublime ssh-agent docker systemadmin aws sudo httpie)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -26,6 +26,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 
+if [[ -d "/opt/android-studio" ]]; then
+	export PATH=$PATH:/opt/android-studio/bin
+	export ANDROID_HOME=/opt/android-studio
+fi
+
 if [[ -d "/opt/etcd" ]]; then
 	export PATH=$PATH:/opt/etcd
 fi
@@ -40,9 +45,9 @@ export LANG=en_GB.UTF-8
 
 setxkbmap gb
 
-if [ -f ~/.rubyrc ]; then
-	source ~/.rubyrc;
-fi
+#if [ -f ~/.rubyrc ]; then
+#	source ~/.rubyrc;
+#fi
 
 if [ -f ~/.sshalias ]; then
 	source ~/.sshalias
