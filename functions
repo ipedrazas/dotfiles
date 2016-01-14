@@ -23,7 +23,7 @@ HD=$FULL
 
 
 function namespace(){
-	export CONTEXT=$(kubectl config view | grep current-context | awk '{print $2}')
+	CONTEXT=$(kubectl config view | grep current-context | awk '{print $2}')
 	kubectl config set-context $CONTEXT --namespace=$1
 }
 
