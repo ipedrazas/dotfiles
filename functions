@@ -23,7 +23,9 @@ HD=$FULL
 
 
 function nodes(){
-	for i in $(pods | awk '{print $1}' | grep $1);do kubectl describe pod $i | grep Node; done;
+	for i in $(kubectl get pods | awk '{print $1}' | grep $1); do
+		kubectl describe pod $i | grep Node; 
+	done;
 }
 
 
