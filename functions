@@ -22,6 +22,12 @@ LC=$BLUE
 HD=$FULL
 
 
+function nodes(){
+	for i in $(pods | awk '{print $1}' | grep $1);do kubectl describe pod $i | grep Node; done;
+}
+
+
+
 function namespace(){
 	CONTEXT=$(kubectl config view | grep current-context | awk '{print $2}')
 	kubectl config set-context $CONTEXT --namespace=$1
