@@ -27,8 +27,9 @@ fi
 
 
 if [[ -d "/opt/android-studio" ]]; then
-	export PATH=$PATH:/opt/android-studio/bin
-	export ANDROID_HOME=/opt/android-studio
+	#export ANDROID_HOME=/opt/android-studio
+	export ANDROID_HOME=~/Android/Sdk
+	export PATH=$PATH:/opt/android-studio/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 fi
 
 if [[ -d "/opt/etcd" ]]; then
@@ -73,3 +74,11 @@ if [ -f /home/ivan/.gvm/scripts/gvm ]; then
 fi
 
 export KUBERNETES_PROVIDER=aws;
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/ivan/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/home/ivan/google-cloud-sdk/completion.zsh.inc'
+
+export IO_HOME="/home/ivan/c24"
