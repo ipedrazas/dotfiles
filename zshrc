@@ -82,3 +82,5 @@ source '/home/ivan/google-cloud-sdk/path.zsh.inc'
 source '/home/ivan/google-cloud-sdk/completion.zsh.inc'
 
 export IO_HOME="/home/ivan/c24"
+
+export tWIFIIP=$(ip addr | awk '/inet/ && /wlan0/{sub(/\/.*$/,"",$2); print $2}')
