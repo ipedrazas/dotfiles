@@ -153,3 +153,7 @@ alias kds="kubectl describe service "
 
 alias mountusb="udisksctl mount -b /dev/sdb1"
 
+
+alias getawsopenvpndev="aws --profile hod-openvpndev ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
+
+alias getawscommons="aws --profile hod-commons ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
