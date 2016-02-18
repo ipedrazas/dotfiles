@@ -157,3 +157,9 @@ alias mountusb="udisksctl mount -b /dev/sdb1"
 alias getawsopenvpndev="aws --profile hod-openvpndev ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
 
 alias getawscommons="aws --profile hod-commons ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
+
+
+alias getawsdspdev="aws --profile hod-dsp-dev ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
+
+alias getawsplayground="aws --profile ho ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
+
