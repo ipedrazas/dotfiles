@@ -68,7 +68,7 @@ fi
 
 if [ -f /home/ivan/.gvm/scripts/gvm ]; then
 	source /home/ivan/.gvm/scripts/gvm
-	gvm use go1.5.1
+	gvm use go1.6
 	export GOPATH="$HOME/go"
 	export PATH=$PATH:/home/ivan/go/bin:
 fi
