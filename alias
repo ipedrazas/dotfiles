@@ -49,7 +49,6 @@ alias copykey='xclip -sel clip < ~/.ssh/id_rsa.pub'
 
 # Java
 
-alias setjava6='sudo update-java-alternatives -s java-6-oracle'
 alias setjava7='sudo update-java-alternatives -s java-7-oracle'
 alias setjava8='sudo update-java-alternatives -s java-8-oracle'
 
@@ -150,6 +149,8 @@ alias rcs="kubectl get rc"
 alias svcs="kubectl get services"
 alias kdp="kubectl describe pod "
 alias kds="kubectl describe service "
+alias nodes="kubectl get nodes"
+alias klogs="kubectl logs"
 
 alias mountusb="udisksctl mount -b /dev/sdb1"
 

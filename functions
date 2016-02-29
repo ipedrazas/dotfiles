@@ -22,6 +22,10 @@ LC=$BLUE
 HD=$FULL
 
 
+function kports(){
+		kubectl port-forward $1 $2:$2
+}
+
 function nodes(){
 	for i in $(kubectl get pods | awk '{print $1}' | grep $1); do
 		kubectl describe pod $i | grep Node; 
