@@ -34,9 +34,9 @@ function nodes(){
 
 
 
-function namespace(){
+function context(){
 	CONTEXT=$(kubectl config view | grep current-context | awk '{print $2}')
-	kubectl config set-context $CONTEXT --namespace=$1
+	kubectl config use-context $CONTEXT
 }
 
 function setDSP(){
