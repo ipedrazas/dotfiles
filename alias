@@ -164,3 +164,5 @@ alias getawsdspdev="aws --profile hod-dsp-dev ec2 describe-instances --query 'Re
 
 alias getawsplayground="aws --profile ho ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
 
+alias getsip="aws --profile sip ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
+

@@ -35,21 +35,7 @@ function nodes(){
 
 
 function context(){
-	CONTEXT=$(kubectl config view | grep current-context | awk '{print $2}')
-	kubectl config use-context $CONTEXT
-}
-
-function setDSP(){
-	kubectl config set-cluster dev-dsp --server=https://kube-dev-dsp.notprod.homeoffice.gov.uk
-	kubectl config set-credentials dev-dsp --token=$KUBE_TOKEN
-	kubectl config set-context dev-dsp --cluster=dev-dsp --namespace=$NAMESPACE --user=dev-dsp
-	kubectl config use-context dev-dsp
-}
-
-function newpost(){
-	TODAY=$(date '+%Y_%m_%d__%H_%M_%S')
-	TITLE=$1
-	hugo new post/"$TODAY-$TITLE"
+	kubectl config use-context $1
 }
 
 function dex(){
