@@ -145,6 +145,7 @@ alias slack='docker start slack'
 alias k="kubectl"
 alias kc="kubectl create -f"
 alias pods="kubectl get pods"
+alias allpods="kubectl get pods --all-namespaces"
 alias rcs="kubectl get rc"
 alias svcs="kubectl get services"
 alias kd="kubectl describe"

@@ -26,10 +26,18 @@ function kports(){
 		kubectl port-forward $1 $2:$2
 }
 
-function nodes(){
+function podnodes(){
+
 	for i in $(kubectl get pods | awk '{print $1}' | grep $1); do
 		kubectl describe pod $i | grep Node; 
 	done;
+}
+
+function allpodnodes(){
+		kubectl get pods --all-namespaces | awk 'NR>1 {print "kubectl describe pod " $2 " --context="$1 " | grep Node; "}' | while IFS= read -r line ; do
+				echo "$line" | awk '{print "POD: " $4 " " $5 }';
+    		eval $line;
+		done		
 }
 
 
