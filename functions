@@ -21,6 +21,14 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
+function initssh(){
+	KEYS=("id_rsa_homeoffice" "sip-dev.pem" "sip-prod.pem")
+	for KEY in $KEYS; do
+		ssh-add ~/.ssh/$KEY
+	done;
+
+}
+
 
 function kports(){
 		kubectl port-forward $1 $2:$2

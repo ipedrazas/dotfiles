@@ -32,6 +32,10 @@ if [[ -d "/opt/android-studio" ]]; then
 	export PATH=$PATH:/opt/android-studio/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 fi
 
+if [[ -d "/opt/kb8or" ]]; then
+	export PATH=$PATH:/opt/kb8or
+fi
+
 if [[ -d "/opt/etcd" ]]; then
 	export PATH=$PATH:/opt/etcd
 fi
@@ -84,3 +88,5 @@ source '/home/ivan/google-cloud-sdk/completion.zsh.inc'
 export IO_HOME="/home/ivan/c24"
 
 export WIFIIP=$(ip addr | awk '/inet/ && /wlan0/{sub(/\/.*$/,"",$2); print $2}')
+
+initssh
