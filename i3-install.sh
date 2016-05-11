@@ -6,7 +6,7 @@ cp ./i3status.conf ~/.i3/
 
 sudo apt-add-repository -y ppa:yktooo/ppa
 
-sudo apt-get install -y i3 dunst i3lock zip lxappearance gtk-chtheme qt4-qtconfig indicator-sound-switcher gnome-icon-theme-full
+sudo apt-get install -y i3 dunst i3lock zip lxappearance gtk-chtheme qt4-qtconfig indicator-sound-switcher gnome-icon-theme-full unclutter
 wget http://cz.archive.ubuntu.com/ubuntu/pool/universe/i/i3status/i3status_2.9-2_amd64.deb
 sudo dpkg -i i3status_2.9-2_amd64.deb
 rm i3status_2.9-2_amd64.deb

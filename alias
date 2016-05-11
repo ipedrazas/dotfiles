@@ -154,6 +154,10 @@ alias kds="kubectl describe service "
 alias nodes="kubectl get nodes"
 alias klogs="kubectl logs"
 alias ns="kubectl get ns"
+alias deploys="kubectl get deployment"
+
+alias an="--all-namespaces"
+
 
 alias mountusb="udisksctl mount -b /dev/sdb1"
 
