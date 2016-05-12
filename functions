@@ -21,6 +21,10 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
+function watchpods(){
+	watch 'kubectl get po --all-namespaces -o wide | awk "{{ print \$2 \" - \" \$4 \" - \"  \$7 }}"'
+}
+
 function initssh(){
 	KEYS=("id_rsa_homeoffice" "sip-dev.pem" "sip-prod.pem")
 	for KEY in $KEYS; do
