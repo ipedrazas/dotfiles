@@ -1,3 +1,5 @@
+alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
+
 
 # some more ls aliases
 alias grep='grep --color=auto'
