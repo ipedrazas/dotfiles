@@ -173,3 +173,5 @@ alias getawsplayground="aws --profile ho ec2 describe-instances --query 'Reserva
 
 alias getsip="aws --profile sip ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
 
+
+alias getawssoho="aws --profile sohohouse ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Environment\`].Value),join(\`,\`,Tags[?Key==\`Name\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
