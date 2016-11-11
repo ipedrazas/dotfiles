@@ -37,7 +37,6 @@ alias search='sudo apt-cache search'
 alias install='sudo dpkg -i'
 alias hosts='sudo vi /etc/hosts'
 alias vmkernel='sudo /etc/init.d/vboxdrv setup'
-alias rs='python manage.py runserver'
 alias vi='vim'
 alias listen='sudo netstat -plunt'
 
@@ -65,14 +64,11 @@ alias vssh='vagrant ssh'
 alias d="docker"
 alias dr="docker run"
 alias drm="docker rm"
+alias drmi="docker rmi"
 alias dps="docker ps"
 alias ds="docker stop"
 alias dlogs="docker logs"
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
-
-#alias i='sudo pacman -S'
-#alias u='sudo pacman -U'
-#alias m='makepkg -Acs'
 
 alias log='tail -f -n50 '
 alias df='df -H'
@@ -146,10 +142,12 @@ alias slack='docker start slack'
 
 alias k="kubectl"
 alias kc="kubectl create -f"
+alias kg="kubectl get"
 alias pods="kubectl get pods"
 alias allpods="kubectl get pods --all-namespaces"
 alias rcs="kubectl get rc"
 alias svcs="kubectl get services"
+alias dep="kubectl get deployment"
 alias kd="kubectl describe"
 alias kdp="kubectl describe pod "
 alias kds="kubectl describe service "
@@ -157,21 +155,17 @@ alias nodes="kubectl get nodes"
 alias klogs="kubectl logs"
 alias ns="kubectl get ns"
 alias deploys="kubectl get deployment"
+alias events="kubectl get events"
+alias kexec="kubectl exec -it "
 
 
 alias mountusb="udisksctl mount -b /dev/sdb1"
 
 
 alias getawsopenvpndev="aws --profile hod-openvpndev ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
-
 alias getawscommons="aws --profile hod-commons ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
-
-
 alias getawsdspdev="aws --profile hod-dsp-dev ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
-
 alias getawsplayground="aws --profile ho ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
-
 alias getsip="aws --profile sip ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
-
 
 alias getawssoho="aws --profile sohohouse ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Environment\`].Value),join(\`,\`,Tags[?Key==\`Name\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
