@@ -23,6 +23,11 @@ if [[ -x `which virtualenv` ]]; then
     HAS_VIRTUALENV=1
 fi
 
+
+youtube(){
+	docker run -it -v $(pwd):/out ipedrazas/youtube $1
+}
+
 # -------------------------------------------------------------------
 # compressed file expander
 # (from https://github.com/myfreeweb/zshuery/blob/master/zshuery.sh)

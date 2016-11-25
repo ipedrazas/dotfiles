@@ -157,15 +157,13 @@ alias ns="kubectl get ns"
 alias deploys="kubectl get deployment"
 alias events="kubectl get events"
 alias kexec="kubectl exec -it "
-
+alias secrets="kubectl get secrets"
 
 alias mountusb="udisksctl mount -b /dev/sdb1"
 
 
 alias getawsopenvpndev="aws --profile hod-openvpndev ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
 alias getawscommons="aws --profile hod-commons ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
-alias getawsdspdev="aws --profile hod-dsp-dev ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
-alias getawsplayground="aws --profile ho ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
 alias getsip="aws --profile sip ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Env\`].Value),join(\`,\`,Tags[?Key==\`Role\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
 
 alias getawssoho="aws --profile sohohouse ec2 describe-instances --query 'Reservations[].Instances[].[join(\`,\`,Tags[?Key==\`Environment\`].Value),join(\`,\`,Tags[?Key==\`Name\`].Value),PublicIpAddress,State.Name,InstanceId]' --output=table"
