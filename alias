@@ -47,13 +47,6 @@ alias ping='ping -c 5'
 
 alias copykey='xclip -sel clip < ~/.ssh/id_rsa.pub'
 
-
-# Java
-
-alias setjava7='sudo update-java-alternatives -s java-7-oracle'
-alias setjava8='sudo update-java-alternatives -s java-8-oracle'
-
-
 # Vagrant
 alias up='vagrant up'
 alias valt='vagrant halt'
@@ -158,6 +151,10 @@ alias deploys="kubectl get deployment"
 alias events="kubectl get events"
 alias kexec="kubectl exec -it "
 alias secrets="kubectl get secrets"
+alias igs="kubectl get ingress"
+alias contexts="kubectl config get-contexts"
+alias ktop="kubectl top nodes"
+
 
 alias mountusb="udisksctl mount -b /dev/sdb1"
 

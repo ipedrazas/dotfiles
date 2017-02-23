@@ -93,6 +93,19 @@ UC=$GREEN
 LC=$BLUE
 HD=$FULL
 
+function encode(){
+	echo -n "$1" | base64
+}
+
+
+function decode(){
+	echo -n "$1" | base64 -D
+}
+
+function gettoken(){
+	kubectl get secret $(kubectl get secret | grep default | awk '{print $1}') -o yaml | grep "token:" | awk '{print $2}' | base64 -D
+}
+
 function watchpods(){
 	watch 'kubectl get po --all-namespaces -o wide | awk "{{ print \$2 \" - \" \$4 \" - \"  \$7 }}"'
 }
@@ -105,6 +118,9 @@ function initssh(){
 
 }
 
+function dp(){
+	kubectl delete pod $1 --grace-period=0
+}
 
 function kports(){
 		kubectl port-forward $1 $2:$2
@@ -124,7 +140,11 @@ function allpodnodes(){
 		done		
 }
 
-
+function cleandocker(){
+	docker rm $(docker ps -q -f 'status=exited')
+	docker rmi $(docker images -q -f "dangling=true")
+	docker volume rm $(docker volume ls -qf dangling=true)
+}
 
 function context(){
 	kubectl config use-context $1
