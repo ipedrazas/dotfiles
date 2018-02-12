@@ -32,9 +32,6 @@ if [[ -d "/opt/android-studio" ]]; then
 	export PATH=$PATH:/opt/android-studio/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 fi
 
-if [[ -d "/opt/kb8or" ]]; then
-	export PATH=$PATH:/opt/kb8or
-fi
 
 if [[ -d "/opt/etcd" ]]; then
 	export PATH=$PATH:/opt/etcd
@@ -50,9 +47,6 @@ export LANG=en_GB.UTF-8
 
 setxkbmap gb
 
-#if [ -f ~/.rubyrc ]; then
-#	source ~/.rubyrc;
-#fi
 
 if [ -f ~/.sshalias ]; then
 	source ~/.sshalias
@@ -62,14 +56,6 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-
-K=/opt/kubernetes/cluster
-
-if [[ -d  $K ]]; then
-	export PATH=$PATH:$K:
-fi
-
-
 if [ -f /home/ivan/.gvm/scripts/gvm ]; then
 	source /home/ivan/.gvm/scripts/gvm
 	gvm use go1.6
@@ -77,7 +63,6 @@ if [ -f /home/ivan/.gvm/scripts/gvm ]; then
 	export PATH=$PATH:/home/ivan/go/bin:
 fi
 
-export KUBERNETES_PROVIDER=aws;
 
 # The next line updates PATH for the Google Cloud SDK.
 source '/home/ivan/google-cloud-sdk/path.zsh.inc'
@@ -85,7 +70,6 @@ source '/home/ivan/google-cloud-sdk/path.zsh.inc'
 # The next line enables shell command completion for gcloud.
 source '/home/ivan/google-cloud-sdk/completion.zsh.inc'
 
-export IO_HOME="/home/ivan/c24"
 
 export WIFIIP=$(ip addr | awk '/inet/ && /wlan0/{sub(/\/.*$/,"",$2); print $2}')
 

@@ -27,7 +27,9 @@ fi
 youtube(){
 	docker run -it -v $(pwd):/out ipedrazas/youtube $1
 }
-
+nodeport(){
+	kubectl get -o yaml $1 | grep nodePort
+}
 # -------------------------------------------------------------------
 # compressed file expander
 # (from https://github.com/myfreeweb/zshuery/blob/master/zshuery.sh)

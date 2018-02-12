@@ -1,3 +1,8 @@
+
+alias uuid="python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)' | pbcopy && pbpaste && echo"
+
+alias 👻='kubectl version'
+
 alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
 
 
@@ -140,7 +145,6 @@ alias pods="kubectl get pods"
 alias allpods="kubectl get pods --all-namespaces"
 alias rcs="kubectl get rc"
 alias svcs="kubectl get services"
-alias dep="kubectl get deployment"
 alias kd="kubectl describe"
 alias kdp="kubectl describe pod "
 alias kds="kubectl describe service "
@@ -154,7 +158,7 @@ alias secrets="kubectl get secrets"
 alias igs="kubectl get ingress"
 alias contexts="kubectl config get-contexts"
 alias ktop="kubectl top nodes"
-
+alias podsr="kubectl get pods --sort-by='.status.containerStatuses[0].restartCount'"
 
 alias mountusb="udisksctl mount -b /dev/sdb1"
 
