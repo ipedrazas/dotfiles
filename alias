@@ -16,8 +16,6 @@ alias p='python'
 alias ut='python -m unittest'
 alias api='cd /home/ivan/workspace/blibb-api'
 alias web=' cd /home/ivan/workspace/blibb-web'
-alias depweb='cd /home/ivan/workspace/deploy-web'
-alias depap='cd /home/ivan/wokspace/deploy-api'
 alias ..='cd ..'
 
 
@@ -51,11 +49,6 @@ alias ports='netstat -tulanp'
 alias ping='ping -c 5'
 
 alias copykey='xclip -sel clip < ~/.ssh/id_rsa.pub'
-
-# Vagrant
-alias up='vagrant up'
-alias valt='vagrant halt'
-alias vssh='vagrant ssh'
 
 
 # Docker

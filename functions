@@ -105,7 +105,8 @@ function decode(){
 }
 
 function gettoken(){
-	kubectl get secret $(kubectl get secret | grep default | awk '{print $1}') -o yaml | grep "token:" | awk '{print $2}' | base64 -D
+	NAMESPACE=${1:-default}
+	kubectl get secret -n ${NAMESPACE} $(kubectl get secret -n ${NAMESPACE} | grep default | awk '{print $1}') -o yaml | grep "token:" | awk '{print $2}' | base64 -D
 }
 
 function watchpods(){
