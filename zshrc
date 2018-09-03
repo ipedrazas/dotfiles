@@ -74,3 +74,7 @@ source '/home/ivan/google-cloud-sdk/completion.zsh.inc'
 export WIFIIP=$(ip addr | awk '/inet/ && /wlan0/{sub(/\/.*$/,"",$2); print $2}')
 
 # initssh
+
+
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
