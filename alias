@@ -17,7 +17,7 @@ alias ut='python -m unittest'
 alias api='cd /home/ivan/workspace/blibb-api'
 alias web=' cd /home/ivan/workspace/blibb-web'
 alias ..='cd ..'
-
+alias pip=pip3
 
 alias hosts='sudo vim /etc/hosts'
 # Pipe my public key to my clipboard.
@@ -40,7 +40,7 @@ alias search='sudo apt-cache search'
 alias install='sudo dpkg -i'
 alias hosts='sudo vi /etc/hosts'
 alias vmkernel='sudo /etc/init.d/vboxdrv setup'
-alias vi='vim'
+alias vi='nvim'
 alias listen='sudo netstat -plunt'
 
 # IP
@@ -118,19 +118,6 @@ alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 alias cpuinfo='lscpu'
 
 
-#API
-function jsonCurl(){
-	if [ $1 ];then
-		curl $1 | pjson
-	else
-		echo "No url present"
-	fi
-}
-
-
-alias userdata='curl http://169.254.169.254/latest/user-data'
-alias slack='docker start slack'
-
 alias k="kubectl"
 alias kc="kubectl create -f"
 alias kg="kubectl get"
@@ -145,7 +132,7 @@ alias nodes="kubectl get nodes"
 alias klogs="kubectl logs"
 alias ns="kubectl get ns"
 alias deploys="kubectl get deployment"
-alias events="kubectl get events"
+alias events="kubectl get events --sort-by='.metadata.creationTimestamp'"
 alias kexec="kubectl exec -it "
 alias secrets="kubectl get secrets"
 alias igs="kubectl get ingress"
