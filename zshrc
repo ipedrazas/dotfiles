@@ -40,12 +40,11 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 source $HOME/dotfiles/kube-ps1.sh
 PROMPT='$(kube_ps1)'$PROMPT
 
-PS1="\`if [ \$? = 0 ]; then echo 😄; else echo 😡; fi\`  ${PS1} "
-
+PS1="\`if [ \$? = 0 ]; then echo 😄; else echo 😡; fi\`  ${PS1}"
 export KUBE_PS1_SYMBOL_ENABLE=false
 export KUBE_PS1_CTX_COLOR=blue
 export KUBE_PS1_SUFFIX=]
 export KUBE_PS1_SUFFIX="] "
 
 
-
+export DOCKER_BUILDKIT=1
