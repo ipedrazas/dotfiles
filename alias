@@ -1,3 +1,6 @@
+alias du='dust'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 
 alias uuid="python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)' | pbcopy && pbpaste && echo"
 
@@ -63,7 +66,6 @@ alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
 alias log='tail -f -n50 '
 alias df='df -H'
-alias du='du -ch'
 
 alias duh='du -ch --max-depth=1  | sort -n -r'
 # Detect which `ls` flavor is in use
