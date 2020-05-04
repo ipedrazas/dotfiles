@@ -1,14 +1,9 @@
 #!/bin/bash
 # minimal statusbar info : Spandan # github.com/spandanji
 
-hddroot(){
-	hddroot="$(df -h | awk 'NR==4{print $3, $5}')"
-	echo -e "ROOT : $hddroot"
-}
-
-hddhome(){
-	hddhome="$(df -h | awk 'NR==9{print $3, $5}')"
-	echo -e "HOME : $hddhome"
+hdd(){
+	hdd="$(df -h | awk 'NR==4{print $3, $5}')"
+	echo -e "HD : $hdd"
 }
 
 mem(){
@@ -16,12 +11,6 @@ mem(){
 	echo -e "MEM : $mem"
 }
 
-brightness(){
-	x=$(cat /sys/class/backlight/intel_backlight/actual_brightness)
-	y=$(cat /sys/class/backlight/intel_backlight/max_brightness)
-	brightness="$(echo "$x $y" | awk '{printf "%0.1f %\n",$1/$2 * 100}')"
-	echo -e "BRI : $brightness"
-}
 
 cpu() {
 	read cpu a b c previdle rest < /proc/stat
@@ -35,23 +24,19 @@ cpu() {
 }
 
 vol(){
-	x="$(pamixer --get-mute)"
-	if [ $x = "true" ]
+	x="$(amixer -D pulse get Master | awk -F 'Left:|[][]' 'BEGIN {RS=""}{ print $5 }')"
+	if [ $x = "off" ]
 	then
 		vol="MUTE"
 	else
-		vol="$(pamixer --get-volume)"
+		vol="$(amixer -D pulse get Master | awk -F 'Left:|[][]' 'BEGIN {RS=""}{ print $3 }')"
 	fi
 	echo -e "VOL: $vol"
 }
 
-dte() {
-  dte="$(date +"%A, %B %d ~ %l:%M:%S %p IST")"
-  echo -e "$dte"
-}
 
 SLEEP_SEC=0.5
 while :; do
-	echo "$(cpu) || $(hddroot) || $(hddhome) || $(mem) ||  $(vol) || $(brightness) || $(dte)" 
+	echo "$(cpu) || $(hdd) || $(mem) ||  $(vol)" 
 	sleep $SLEEP_SEC
 done
