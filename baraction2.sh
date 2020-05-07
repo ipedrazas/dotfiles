@@ -1,6 +1,11 @@
 #!/bin/bash
 # minimal statusbar info : Spandan # github.com/spandanji
 
+public_ip(){
+    pub_ip=$(curl 'https://api.ipify.org?format=txt')
+    echo -e "Public IP: $pub_ip"
+}
+
 hdd(){
 	hdd="$(df -h | grep "/dev/mapper/vgxubuntu-root" | awk '{print $3, $5}')"
 	echo -e "HD : $hdd"
@@ -42,6 +47,6 @@ vol(){
 
 SLEEP_SEC=0.5
 while :; do
-    echo "$(cpu) || $(hdd) || $(hdd_data) || $(mem) ||  $(vol)" 
+    echo "$(cpu) || $(hdd) || $(hdd_data) || $(mem) ||  $(vol) || $(public_ip)" 
 	sleep $SLEEP_SEC
 done
