@@ -2,8 +2,13 @@
 # minimal statusbar info : Spandan # github.com/spandanji
 
 hdd(){
-	hdd="$(df -h | awk 'NR==4{print $3, $5}')"
+	hdd="$(df -h | grep "/dev/mapper/vgxubuntu-root" | awk '{print $3, $5}')"
 	echo -e "HD : $hdd"
+}
+
+hdd_data(){
+    data="$(df -h | grep sda2 | awk '{print $3, $5}')"
+    echo -e "DATA : $data" 
 }
 
 mem(){
@@ -37,6 +42,6 @@ vol(){
 
 SLEEP_SEC=0.5
 while :; do
-	echo "$(cpu) || $(hdd) || $(mem) ||  $(vol)" 
+    echo "$(cpu) || $(hdd) || $(hdd_data) || $(mem) ||  $(vol)" 
 	sleep $SLEEP_SEC
 done
