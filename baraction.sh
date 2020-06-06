@@ -4,6 +4,8 @@
 # Tested on: Debian Testing
 # This config can be found on github.com/linuxdabbler
 
+set -eo pipefail
+
 ############################## 
 #	    DATE
 ##############################
@@ -47,8 +49,13 @@ cpu() {
 #	    AUDIO
 ##############################
 mic() {
-    # -c 0 gets the usb mic
-    mic=$(amixer -c 0 get Mic | awk -F'[][]' 'END{ print "[" $2 "]: "$6 }')
+    card=$(aplay -l | grep "card 0" | wc -l)
+    if [ "${card}" != "0" ]; then
+        # -c 0 gets the usb mic
+        mic=$(amixer -c 0 get Mic | awk -F'[][]' 'END{ print "[" $6 "]: " $2 }')
+    else
+        mic="0"
+    fi
     echo -e " Mic $mic"
 }
 
@@ -76,15 +83,21 @@ upgrades() {
 #	    VPN
 ##############################
 
-vpn() {
-	vpn="$(ip a | grep tun0 | grep inet | wc -l)"
-	echo -e " VPN: $vpn "
+getPublicIp() {
+    pub_ip=$(curl -L --silent 'https://api.ipify.org?format=txt' > $HOME/.config/public-ip.txt)
 }
 
-public_ip(){
-    pub_ip=$(curl 'https://api.ipify.org?format=txt')
-    echo -e "$pub_ip"
+getVPNToggle() {
+    return $(ip a | grep tun0 | grep inet | wc -l)
 }
+
+vpn() {
+    vpn="$(getVPNToggle)"
+    pub_ip=$(cat $HOME/.config/public-ip.txt)
+    echo -e "VPN: $vpn [$pub_ip]"
+}
+
+
 ## WEATHER
 weather() {
     wthr="$(cat ~/.config/weather.json | jq '.current_condition[0].weatherDesc[0].value' --raw-output)"
@@ -98,10 +111,15 @@ temp() {
 }
 
 
-SLEEP_SEC=5
+SLEEP_SEC=1
 #loops forever outputting a line every SLEEP_SEC secs
 while :; do     
+    toggle=$(getVPNToggle)
+    if [ "$vpnToggle" != "$toggle" ]; then
+        getPublicIp 
+    fi 
 #This bar is for spectrwm 3.3+
-    echo "+@fg=5;$(cpu) +@fg=0;| +@fg=2;$(mem) +@fg=0;| +@fg=1;$(mic) +@fg=0;| +@fg=3;$(vpn)[$(public_ip)]+@fg=0;| +@fg=4;$(vol)+@fg=0;|+@fg=2;$(weather) ($(temp)°) +@fg=0;|"
+    echo "+@fg=5;$(cpu) +@fg=0;| +@fg=2;$(mem) +@fg=0;| +@fg=1;$(mic) +@fg=0;| +@fg=3;$(vpn)+@fg=0;| +@fg=4;$(vol)+@fg=0;|+@fg=2;$(weather) ($(temp)°) +@fg=0;|"
 	sleep $SLEEP_SEC
+    vpnToggle=$(getVPNToggle)
 done
