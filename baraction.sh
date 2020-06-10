@@ -4,7 +4,7 @@
 # Tested on: Debian Testing
 # This config can be found on github.com/linuxdabbler
 
-set -eo pipefail
+#set -eo pipefail
 
 ############################## 
 #	    DATE
@@ -84,7 +84,7 @@ upgrades() {
 ##############################
 
 getPublicIp() {
-    pub_ip=$(curl -L --silent 'https://api.ipify.org?format=txt' > $HOME/.config/public-ip.txt)
+    curl -L --silent 'https://api.ipify.org?format=txt' > $HOME/.config/public-ip.txt &
 }
 
 getVPNToggle() {
@@ -92,7 +92,7 @@ getVPNToggle() {
 }
 
 vpn() {
-    vpn="$(getVPNToggle)"
+    vpn="$(ip a | grep tun0 | grep inet | wc -l)"
     pub_ip=$(cat $HOME/.config/public-ip.txt)
     echo -e "VPN: $vpn [$pub_ip]"
 }
