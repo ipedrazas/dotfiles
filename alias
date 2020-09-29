@@ -1,3 +1,5 @@
+
+alias shot=flameshot gui -p ~/Pictures/shots
 alias du='dust'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
