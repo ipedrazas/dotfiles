@@ -1,63 +1,8 @@
-[core]
-	editor = vim
-  excludesfile = ~/.gitignore_global
-  
 [user]
-	name = Ivan Pedrazas
 	email = ipedrazas@gmail.com
-[color]
-  ui = auto
-  branch = auto
-  diff = auto
-  status = auto
-  
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+    name = Ivan Pedrazas
+	signingkey = CED21C45ADBC8316
 
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
-
-[alias]
-  aa = add --all
-  br = branch
-  ci = commit -a
-  co = checkout
-  dc = diff --cached
-  st = status
-  wtf = !git-wtf
-  x = !gitx
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-
-[merge]
-  tool = vimdiff
-
-[branch]
-  autosetuprebase = always
-
-[merge]
-  ff = false
-
-[push]
-  default = upstream
-
-[pull]
-  rebase = true
-
-[branch "master"]
-  rebase = true
-  mergeoptions = --no-ff
-
-[credential]
-	helper = cache --timeout=3600
-[url "https://github.com/"]
-	insteadOf = git://github.com/
+[commit]
+	template = /home/ivan/.config/git/commit.txt
+	gpgsign = true

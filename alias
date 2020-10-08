@@ -1,4 +1,9 @@
 
+alias shot=flameshot gui -p ~/Pictures/shots
+alias du='dust'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 alias uuid="python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)' | pbcopy && pbpaste && echo"
 
 alias 👻='kubectl version'
@@ -27,7 +32,7 @@ alias pubkey="more ~/.ssh/id_rsa.pub | xclip -selection clipboard | echo '=> Pub
 alias prikey="more ~/.ssh/id_rsa | xclip -selection clipboard | echo '=> Private key copied to pasteboard.'"
 # Git
 alias gs='git status'
-alias gc='git commit -m'
+alias gc='git commit -a -S -m'
 alias gp='git pull'
 alias ga='git add .'
 alias gsa='git ls-files --others --exclude-standard'
@@ -63,7 +68,6 @@ alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 
 alias log='tail -f -n50 '
 alias df='df -H'
-alias du='du -ch'
 
 alias duh='du -ch --max-depth=1  | sort -n -r'
 # Detect which `ls` flavor is in use
