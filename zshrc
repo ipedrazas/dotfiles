@@ -8,7 +8,7 @@ ZSH_THEME="candy"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/Users/ivan/workspace/utils
+export PATH=$PATH:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin
 
 source $HOME/dotfiles/alias
 source $HOME/dotfiles/functions
@@ -16,7 +16,6 @@ source $HOME/dotfiles/functions
 
 export LANG=en_GB.UTF-8
 
-setxkbmap gb
 
 if [ -f ~/.sshalias ]; then
 	source ~/.sshalias
@@ -25,18 +24,9 @@ fi
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
-
-
-export WIFIIP=$(ip addr | awk '/inet/ && /wlan0/{sub(/\/.*$/,"",$2); print $2}')
 export GOPATH=$HOME/workspace/go
 
-export PATH=$PATH:$GOPATH/bin:/snap/bin/go
 
-# initssh
-
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-#source $HOME/dotfiles/51_prompt.sh
 source $HOME/dotfiles/kube-ps1.sh
 PROMPT='$(kube_ps1)'$PROMPT
 
@@ -46,5 +36,3 @@ export KUBE_PS1_CTX_COLOR=blue
 export KUBE_PS1_SUFFIX=]
 export KUBE_PS1_SUFFIX="] "
 
-
-export DOCKER_BUILDKIT=1
