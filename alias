@@ -45,7 +45,7 @@ alias search='sudo apt-cache search'
 alias install='sudo dpkg -i'
 alias hosts='sudo vi /etc/hosts'
 alias vmkernel='sudo /etc/init.d/vboxdrv setup'
-alias vi='nvim'
+alias vi='vim'
 alias listen='sudo netstat -plunt'
 
 # IP
