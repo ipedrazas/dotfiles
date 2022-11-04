@@ -149,6 +149,10 @@ function cleandocker(){
 	docker volume rm $(docker volume ls -qf dangling=true)
 }
 
+function kns(){
+  kubectl config set-context --current --namespace $1
+}
+
 function context(){
 	kubectl config use-context $1
 }

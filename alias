@@ -32,8 +32,7 @@ alias pubkey="more ~/.ssh/id_rsa.pub | xclip -selection clipboard | echo '=> Pub
 alias prikey="more ~/.ssh/id_rsa | xclip -selection clipboard | echo '=> Private key copied to pasteboard.'"
 # Git
 alias gs='git status'
-alias gc='git commit -a -S -m'
-alias gp='git pull'
+alias gc='git commit -a -s -m'
 alias ga='git add .'
 alias gsa='git ls-files --others --exclude-standard'
 

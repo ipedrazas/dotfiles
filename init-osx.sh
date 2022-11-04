@@ -6,7 +6,6 @@
 
 echo "Installing brew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap homebrew/cask
 
 
 brew install 1password 1password-cli
@@ -56,3 +55,6 @@ brew install wally
 brew install visual-studio-code
 brew install yq
 brew install zoom
+
+
+mas install tailscale
