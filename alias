@@ -142,7 +142,7 @@ alias igs="kubectl get ingress"
 alias contexts="kubectl config get-contexts"
 alias ktop="kubectl top nodes"
 alias podsr="kubectl get pods --sort-by='.status.containerStatuses[0].restartCount'"
-
+alias deljobs="kubectl delete jobs `kubectl get jobs -o custom-columns=:.metadata.name`"
 alias mountusb="udisksctl mount -b /dev/sdb1"
 
 
