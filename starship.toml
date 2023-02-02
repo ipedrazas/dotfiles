@@ -1,8 +1,8 @@
 format = """
-[](#640b7a)\
+[](#183e70)\
 $os\
 $kubernetes\
-[](bg:#5f22f0 fg:#640b7a)\
+[](bg:#5f22f0 fg:#183e70)\
 $directory\
 [](fg:#5f22f0 bg:#0b7a52)\
 $git_branch\
@@ -22,9 +22,9 @@ map_symbol = true
 disabled = false
 
 [kubernetes]
-format = '[☸️  $cluster:$namespace ]($style)'
+format = '[ $cluster:$namespace ]($style)'
 disabled = false
-style = "bg:#640b7a"
+style = "bg:#183e70 fg:#43fc0a"
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
