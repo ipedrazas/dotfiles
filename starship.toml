@@ -8,18 +8,13 @@ $directory\
 $git_branch\
 [](fg:#0b7a52 bg:#33658A)\
 $time\
-[ ](fg:#33658A)\
+[ ](fg:#33658A)
+$status> 
 """
 
 # Disable the blank line at the start of the prompt
 # add_newline = false
-
-[status]
-symbol = '😡 '
-success_symbol = '😄'
-format = '[$symbol]($style) '
-map_symbol = true
-disabled = false
+# line_break = true
 
 [kubernetes]
 format = '[ $cluster:$namespace ]($style)'
@@ -77,8 +72,12 @@ disabled = false
 time_format = "%T" # Hour:Minute:Seconds Format
 style = "bg:#33658A"
 format = '[  $time ]($style)'
-utc_time_offset = '0'
+utc_time_offset = '1'
 
-
-[line_break]
+[status]
+symbol = '😡'
+sigint_symbol = '😡'
+success_symbol = '😄'
+format = '[$symbol]($style) '
+map_symbol = true
 disabled = false

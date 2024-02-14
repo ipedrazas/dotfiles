@@ -1,6 +1,5 @@
 
 alias shot=flameshot gui -p ~/Pictures/shots
-alias du='dust'
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
@@ -64,6 +63,9 @@ alias dps="docker ps"
 alias ds="docker stop"
 alias dlogs="docker logs"
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+
+alias up="docker compose up"
+alias upd="docker compose up -d"
 
 alias log='tail -f -n50 '
 alias df='df -H'
