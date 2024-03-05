@@ -6,8 +6,6 @@ alias pbpaste='xclip -selection clipboard -o'
 
 alias uuid="python -c 'import sys,uuid; sys.stdout.write(uuid.uuid4().hex)' | pbcopy && pbpaste && echo"
 
-alias 👻='kubectl version'
-
 alias bu='brew update; brew upgrade; brew cleanup; brew doctor'
 
 
@@ -37,10 +35,6 @@ alias ga='git add .'
 alias gsa='git ls-files --others --exclude-standard'
 
 alias size='du -hs'
-alias i='sudo apt-get install'
-alias u='sudo apt-get update'
-alias upgrade='sudo apt-get dist-upgrade'
-alias search='sudo apt-cache search'
 alias install='sudo dpkg -i'
 alias hosts='sudo vi /etc/hosts'
 alias vmkernel='sudo /etc/init.d/vboxdrv setup'
@@ -64,9 +58,11 @@ alias dps="docker ps"
 alias ds="docker stop"
 alias dlogs="docker logs"
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
-
+alias dls="docker image ls"
 alias log='tail -f -n50 '
 alias df='df -H'
+alias up='docker compose up'
+alias upd='docker compose up -d'
 
 alias duh='du -ch --max-depth=1  | sort -n -r'
 # Detect which `ls` flavor is in use
@@ -82,8 +78,6 @@ alias lsd='ls -lF ${colorflag} | grep "^d"'
 alias l="ls -lF ${colorflag}"
 # List all files colorized in long format, including dot files
 alias la="ls -laF ${colorflag}"
-
-alias t='tmux a || tmux new-s'
 
 # ----------------------------------------------------------------------
 # ALIASES / FUNCTIONS
@@ -138,7 +132,7 @@ alias deploys="kubectl get deployment"
 alias events="kubectl get events --sort-by='.metadata.creationTimestamp'"
 alias kexec="kubectl exec -it "
 alias secrets="kubectl get secrets"
-alias igs="kubectl get ingress"
+alias ing="kubectl get ingress"
 alias contexts="kubectl config get-contexts"
 alias ktop="kubectl top nodes"
 alias podsr="kubectl get pods --sort-by='.status.containerStatuses[0].restartCount'"
